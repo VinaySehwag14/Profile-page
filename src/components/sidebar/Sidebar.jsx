@@ -1,19 +1,4 @@
 import "./sidebar.css";
-// import {
-//   LineStyle,
-//   Timeline,
-//   TrendingUp,
-//   PermIdentity,
-//   Storefront,
-//   AttachMoney,
-//   BarChart,
-//   MailOutline,
-//   DynamicFeed,
-//   ChatBubbleOutline,
-//   WorkOutline,
-//   Report,
-// } from "@mui/icons-material";
-
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 
@@ -27,7 +12,7 @@ export default function Sidebar() {
               <DashboardIcon className="sidebarIcon" />
               Dashboard
             </li>
-            <li className="sidebarListItem">
+            <li className="sidebarListItem active">
               <PersonIcon className="sidebarIcon" />
               Profile
             </li>
