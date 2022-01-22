@@ -1,14 +1,35 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "./App.css";
+import { API } from "./backend";
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import User from "./pages/user/User";
+
 const App = () => {
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await axios.get(`${API}`);
+        setUser(res.data.results[0]);
+        console.log("I ran firsts");
+        console.log(res.data, "this is my data");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    getData();
+  }, []);
+
   return (
     <>
-      <Topbar />
+      <Topbar image={user} />
       <div className="container">
         <Sidebar />
-        <User />
+        <User user={user} />
       </div>
     </>
   );
