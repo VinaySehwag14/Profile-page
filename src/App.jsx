@@ -14,8 +14,6 @@ const App = () => {
       try {
         const res = await axios.get(`${API}`);
         setUser(res.data.results[0]);
-        console.log("I ran firsts");
-        console.log(res.data, "this is my data");
       } catch (err) {
         console.log(err);
       }
