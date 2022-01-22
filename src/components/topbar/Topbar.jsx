@@ -15,7 +15,6 @@ const Topbar = ({ image }) => {
           <div className="topRight">
             <div className="topbarIconContainer">
               <NotificationsIcon />
-              <span className="topIconBadge">2</span>
             </div>
             <img src={image.picture.medium} alt="aatar" className="topAvatar" />
             <div className="topbarIconContainer">
